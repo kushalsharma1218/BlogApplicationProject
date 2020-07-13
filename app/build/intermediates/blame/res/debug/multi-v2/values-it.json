@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\130f40789f3addc98db185e1dbe16726\\core-1.1.0\\res\\values-it\\values-it.xml",
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\25d7d2866e438a65e34ac204d7a714d1\\navigation-ui-2.3.0\\res\\values-it\\values-it.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,164",
+                        "endColumns": "108,122",
+                        "endOffsets": "159,282"
+                    },
+                    "to": {
+                        "startLines": "55,56",
+                        "startColumns": "4,4",
+                        "startOffsets": "6115,6224",
+                        "endColumns": "108,122",
+                        "endOffsets": "6219,6342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\e23b0e6577d3771fcd3b8e12415b5e58\\core-1.3.0\\res\\values-it\\values-it.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,23 +69,6 @@
                         "startOffsets": "105,210,313,422,506,611,730,808,884,976,1069,1162,1256,1358,1452,1549,1644,1736,1828,1908,2014,2121,2219,2323,2429,2536,2699,6425",
                         "endColumns": "104,102,108,83,104,118,77,75,91,92,92,93,101,93,96,94,91,91,79,105,106,97,103,105,106,162,99,80",
                         "endOffsets": "205,308,417,501,606,725,803,879,971,1064,1157,1251,1353,1447,1544,1639,1731,1823,1903,2009,2116,2214,2318,2424,2531,2694,2794,6501"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\f990d282b68a7edf6aa09df6dc4ce312\\navigation-ui-2.2.2\\res\\values-it\\values-it.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,164",
-                        "endColumns": "108,122",
-                        "endOffsets": "159,282"
-                    },
-                    "to": {
-                        "startLines": "55,56",
-                        "startColumns": "4,4",
-                        "startOffsets": "6115,6224",
-                        "endColumns": "108,122",
-                        "endOffsets": "6219,6342"
                     }
                 },
                 {

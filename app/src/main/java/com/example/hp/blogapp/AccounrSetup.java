@@ -20,16 +20,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -40,8 +36,6 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.zelory.compressor.Compressor;
@@ -56,7 +50,7 @@ public class AccounrSetup extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private boolean isChanged = true;
     private FirebaseFirestore fireStore;
-    private EditText Name;
+    private EditText Name, Contact, Address, Intro;
     private StorageReference mStorageRef;
     Button Submit;
     private String user_id;
@@ -77,59 +71,63 @@ public class AccounrSetup extends AppCompatActivity {
         setSupportActionBar(toolbarSetup);
         getSupportActionBar().setTitle("Account Setup");
 
+        Contact = findViewById(R.id.conatct);
+        Address = findViewById(R.id.address);
+        Intro = findViewById(R.id.intro);
+
         database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("Users"+"/"+"Profile_Details");
-
-
-         Submit = findViewById(R.id.submit);
+        databaseReference = database.getReference("Users");
+        Submit = findViewById(R.id.submit);
         progressBar = findViewById(R.id.AccountSettingsBar);
         user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        fireStore = FirebaseFirestore.getInstance();
         Name = findViewById(R.id.name);
         userImg = findViewById(R.id.profile);
         default_uri = Uri.parse("R.mipmap.user");
 
         //Evertime settings load check if data is already present in FireStore, if yes retrive and set name and image using glide
-        fireStore.collection("Users").document(user_id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful()){
-                    if(task.getResult().exists()){
-                        isChanged = false;
-                        String name = task.getResult().getString("name");
-                        String image = task.getResult().getString("image");
-//                        Toast.makeText(AccounrSetup.this,"DATA EXISTS",Toast.LENGTH_LONG).show();
-                        Name.setText(name);
-
-                        //GLIDE APP set default background
-                        RequestOptions placeHolder = new RequestOptions();
-                        placeHolder.placeholder(R.mipmap.user);
-
-                        //Convert image string to URI and store it in mainImageUri
-                        main_uri = Uri.parse(image);
-
-                        Glide.with(AccounrSetup.this).setDefaultRequestOptions( placeHolder.placeholder(R.mipmap.user)).load(image).into(userImg);
-
-                    }
-                    else{
-                        main_uri = default_uri;
-                        Toast.makeText(AccounrSetup.this,"NO DATA EXISTS",Toast.LENGTH_LONG).show();
-                    }
-                }
-                else{
-                    Toast.makeText(AccounrSetup.this,"Firestore Retrieve Error OUTSIDE",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+//        fireStore.collection("Users").document(user_id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                if(task.isSuccessful()){
+//                    if(task.getResult().exists()){
+//                        isChanged = false;
+//                        String name = task.getResult().getString("name");
+//                        String image = task.getResult().getString("image");
+////                        Toast.makeText(AccounrSetup.this,"DATA EXISTS",Toast.LENGTH_LONG).show();
+//                        Name.setText(name);
+//
+//                        //GLIDE APP set default background
+//                        RequestOptions placeHolder = new RequestOptions();
+//                        placeHolder.placeholder(R.mipmap.user);
+//
+//                        //Convert image string to URI and store it in mainImageUri
+//                        main_uri = Uri.parse(image);
+//
+//                        Glide.with(AccounrSetup.this).setDefaultRequestOptions( placeHolder.placeholder(R.mipmap.user)).load(image).into(userImg);
+//
+//                    }
+//                    else{
+//                        main_uri = default_uri;
+//                        Toast.makeText(AccounrSetup.this,"NO DATA EXISTS",Toast.LENGTH_LONG).show();
+//                    }
+//                }
+//                else{
+//                    Toast.makeText(AccounrSetup.this,"Firestore Retrieve Error OUTSIDE",Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String uName = Name.getText().toString();
+                final String contact = Contact.getText().toString();
+                final String address = Address.getText().toString();
+                final String Introduction = Intro.getText().toString();
                 if (isChanged) {
                     if (!TextUtils.isEmpty(uName) && main_uri != null) {
                         progressBar.setVisibility(View.VISIBLE);
-//                    String user_id = mAuth.getCurrentUser().getUid();
+                       // String user_id = mAuth.getCurrentUser().getUid();
 
                         File imageFile = new File(main_uri.getPath());
 
@@ -148,12 +146,12 @@ public class AccounrSetup extends AppCompatActivity {
                         compressedImageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                         byte[] thumbBitmap = baos.toByteArray();
 
-                        UploadTask thumbImage = mStorageRef.child("/Profile_Photos/thumbs").child(user_id+".jpg").putBytes(thumbBitmap);
+                        UploadTask thumbImage = mStorageRef.child("/Profile_Photos/thumbs").child(user_id + ".jpg").putBytes(thumbBitmap);
                         thumbImage.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                 if (task.isSuccessful()) {
-                                    saveToFire_base( uName);
+                                    saveToFire_base(uName, contact, address, Introduction);
                                 } else {
                                     String error = task.getException().getMessage();
                                     Toast.makeText(AccounrSetup.this, " Image Error" + error, Toast.LENGTH_LONG).show();
@@ -163,15 +161,13 @@ public class AccounrSetup extends AppCompatActivity {
                             }
                         });
 //
-                    }
-                    else {
+                    } else {
                         Toast.makeText(AccounrSetup.this, "No image", Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.INVISIBLE);
                     }
-                }
-                else {
+                } else {
                     Toast.makeText(AccounrSetup.this, "Image not changed", Toast.LENGTH_LONG).show();
-                    saveToFire_base(Name.getText().toString());
+                    saveToFire_base(uName, contact, address, Introduction);
                 }
             }
 
@@ -201,10 +197,10 @@ public class AccounrSetup extends AppCompatActivity {
             }
 
             private void getPicture() {
-                Toast.makeText(AccounrSetup.this,"Successfully Saved",Toast.LENGTH_LONG).show();
+                Toast.makeText(AccounrSetup.this, "Successfully Saved", Toast.LENGTH_LONG).show();
                 CropImage.activity()
                         .setGuidelines(CropImageView.Guidelines.ON)
-                        .setAspectRatio(1,1)
+                        .setAspectRatio(1, 1)
                         .start(AccounrSetup.this);
             }
 
@@ -213,24 +209,20 @@ public class AccounrSetup extends AppCompatActivity {
     }
 
 
-    private void saveToFire_base( final String uName) {
+    private void saveToFire_base(final String uName, final String con, final String add, final String intro) {
 
 
         //If task is not null that is change occured. So get new URI for image also change ThumbNail
 
 
+
         mStorageRef.child("/Profile_Photos/thumbs").child(user_id + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
+                final AccountSetupModelClass accountSetupModelClass = new AccountSetupModelClass(uName, con, add, intro,uri.toString());
 
                 //Create map..with keys common and values
-                Map<String, String> userMap = new HashMap<>();
-
-                userMap.put("name", uName);
-                userMap.put("image", uri.toString());
-
-
-                databaseReference.child(user_id).setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                databaseReference.child(user_id + "/profile_Details").setValue(accountSetupModelClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
@@ -239,7 +231,7 @@ public class AccounrSetup extends AppCompatActivity {
                             startActivity(main);
                         } else {
                             String error = task.getException().getMessage();
-                            Toast.makeText(AccounrSetup.this, " FireStore Error" + error, Toast.LENGTH_LONG).show();
+                            Toast.makeText(AccounrSetup.this, " Firebase Error" + error, Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -259,7 +251,7 @@ public class AccounrSetup extends AppCompatActivity {
                 userImg.setImageURI(main_uri);
                 isChanged = true;
                 String tct = main_uri.toString();
-//                Toast.makeText(AccounrSetup.this,tct,Toast.LENGTH_LONG).show();
+
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();

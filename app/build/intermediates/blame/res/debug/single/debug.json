@@ -496,12 +496,12 @@
         "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_image_placeholder.png.flat",
-        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\image_placeholder.png"
-    },
-    {
         "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_title.png.flat",
         "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\image_placeholder.png"
     },
     {
         "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_field.png.flat",

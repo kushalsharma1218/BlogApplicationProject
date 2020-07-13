@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\130f40789f3addc98db185e1dbe16726\\core-1.1.0\\res\\values-mk\\values-mk.xml",
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\e23b0e6577d3771fcd3b8e12415b5e58\\core-1.3.0\\res\\values-mk\\values-mk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,6 +35,23 @@
                         "startOffsets": "5869",
                         "endColumns": "100",
                         "endOffsets": "5965"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\25d7d2866e438a65e34ac204d7a714d1\\navigation-ui-2.3.0\\res\\values-mk\\values-mk.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,160",
+                        "endColumns": "104,127",
+                        "endOffsets": "155,283"
+                    },
+                    "to": {
+                        "startLines": "47,48",
+                        "startColumns": "4,4",
+                        "startOffsets": "5552,5657",
+                        "endColumns": "104,127",
+                        "endOffsets": "5652,5780"
                     }
                 },
                 {
@@ -69,23 +86,6 @@
                         "startOffsets": "2820,2929,3122,3257,3369,3573,3708,3858,4193,4409,4518,4715,4850,5062,5251,5350,5444",
                         "endColumns": "108,192,134,111,203,134,149,138,215,108,196,134,211,188,98,93,107",
                         "endOffsets": "2924,3117,3252,3364,3568,3703,3853,3992,4404,4513,4710,4845,5057,5246,5345,5439,5547"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\f990d282b68a7edf6aa09df6dc4ce312\\navigation-ui-2.2.2\\res\\values-mk\\values-mk.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,160",
-                        "endColumns": "104,127",
-                        "endOffsets": "155,283"
-                    },
-                    "to": {
-                        "startLines": "47,48",
-                        "startColumns": "4,4",
-                        "startOffsets": "5552,5657",
-                        "endColumns": "104,127",
-                        "endOffsets": "5652,5780"
                     }
                 }
             ]

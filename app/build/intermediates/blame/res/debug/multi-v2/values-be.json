@@ -4,20 +4,20 @@
             "outputFile": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\f990d282b68a7edf6aa09df6dc4ce312\\navigation-ui-2.2.2\\res\\values-be\\values-be.xml",
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\e23b0e6577d3771fcd3b8e12415b5e58\\core-1.3.0\\res\\values-be\\values-be.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,164",
-                        "endColumns": "108,125",
-                        "endOffsets": "159,285"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "47,48",
-                        "startColumns": "4,4",
-                        "startOffsets": "5556,5665",
-                        "endColumns": "108,125",
-                        "endOffsets": "5660,5786"
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5872",
+                        "endColumns": "100",
+                        "endOffsets": "5968"
                     }
                 },
                 {
@@ -35,23 +35,6 @@
                         "startOffsets": "2835,2944,3138,3265,3377,3591,3719,3864,4202,4423,4532,4726,4856,5068,5257,5356,5448",
                         "endColumns": "108,193,126,111,213,127,144,132,220,108,193,129,211,188,98,91,107",
                         "endOffsets": "2939,3133,3260,3372,3586,3714,3859,3992,4418,4527,4721,4851,5063,5252,5351,5443,5551"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\130f40789f3addc98db185e1dbe16726\\core-1.1.0\\res\\values-be\\values-be.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "5872",
-                        "endColumns": "100",
-                        "endOffsets": "5968"
                     }
                 },
                 {
@@ -86,6 +69,23 @@
                         "startOffsets": "3997",
                         "endColumns": "204",
                         "endOffsets": "4197"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\25d7d2866e438a65e34ac204d7a714d1\\navigation-ui-2.3.0\\res\\values-be\\values-be.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,164",
+                        "endColumns": "108,125",
+                        "endOffsets": "159,285"
+                    },
+                    "to": {
+                        "startLines": "47,48",
+                        "startColumns": "4,4",
+                        "startOffsets": "5556,5665",
+                        "endColumns": "108,125",
+                        "endOffsets": "5660,5786"
                     }
                 }
             ]

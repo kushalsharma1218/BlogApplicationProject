@@ -4,23 +4,6 @@
             "outputFile": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\130f40789f3addc98db185e1dbe16726\\core-1.1.0\\res\\values-az\\values-az.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "5857",
-                        "endColumns": "100",
-                        "endOffsets": "5953"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\5682a064c572447632fad03b71819032\\play-services-basement-17.0.0\\res\\values-az\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -55,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\f990d282b68a7edf6aa09df6dc4ce312\\navigation-ui-2.2.2\\res\\values-az\\values-az.xml",
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\e23b0e6577d3771fcd3b8e12415b5e58\\core-1.3.0\\res\\values-az\\values-az.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,162",
-                        "endColumns": "106,118",
-                        "endOffsets": "157,276"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "47,48",
-                        "startColumns": "4,4",
-                        "startOffsets": "5548,5655",
-                        "endColumns": "106,118",
-                        "endOffsets": "5650,5769"
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5857",
+                        "endColumns": "100",
+                        "endOffsets": "5953"
                     }
                 },
                 {
@@ -86,6 +69,23 @@
                         "startOffsets": "105,215,316,426,514,621,735,817,896,987,1079,1173,1272,1373,1466,1561,1655,1746,1838,1922,2027,2133,2233,2342,2447,2549,2707,5774",
                         "endColumns": "109,100,109,87,106,113,81,78,90,91,93,98,100,92,94,93,90,91,83,104,105,99,108,104,101,157,105,82",
                         "endOffsets": "210,311,421,509,616,730,812,891,982,1074,1168,1267,1368,1461,1556,1650,1741,1833,1917,2022,2128,2228,2337,2442,2544,2702,2808,5852"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kushal\\.gradle\\caches\\transforms-2\\files-2.1\\25d7d2866e438a65e34ac204d7a714d1\\navigation-ui-2.3.0\\res\\values-az\\values-az.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,162",
+                        "endColumns": "106,118",
+                        "endOffsets": "157,276"
+                    },
+                    "to": {
+                        "startLines": "47,48",
+                        "startColumns": "4,4",
+                        "startOffsets": "5548,5655",
+                        "endColumns": "106,118",
+                        "endOffsets": "5650,5769"
                     }
                 }
             ]

@@ -80,7 +80,7 @@ public class NewPost extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
 
-        databaseReference = firebaseDatabase.getReference("Users" + "/Post Details/");
+        databaseReference = firebaseDatabase.getReference("Users/" +mauth.getCurrentUser().getUid()+ "/Post Details");
 
 
         newPostImg = findViewById(R.id.newPostImage);
@@ -159,7 +159,7 @@ public class NewPost extends AppCompatActivity {
                                                             String thumbUri = uri.toString();
 
 
-                                                            NewPostModelclass postMap = new NewPostModelclass(postText,"JAVA",downloadUrl.toString(),user_id,thumbUri,FieldValue.serverTimestamp().toString());
+                                                            NewPostModelclass postMap = new NewPostModelclass(postText,"JAVA",downloadUrl,user_id,thumbUri,FieldValue.serverTimestamp().toString());
 
                                                             //Finally add everything to collection
                                                             //we dont add .document as it must be created and named randomly by firebase automatically
