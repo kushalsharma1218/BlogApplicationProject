@@ -20,7 +20,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -40,7 +41,7 @@ import java.util.UUID;
 import id.zelory.compressor.Compressor;
 
 public class NewPost extends AppCompatActivity {
-    private static final int MAX_LENGTH = 100 ;
+    private static final int MAX_LENGTH = 100;
     private Toolbar toolbarNewPost;
     private Button submitBtn;
     private EditText newPostText;
@@ -48,16 +49,23 @@ public class NewPost extends AppCompatActivity {
     private FirebaseAuth mauth;
     private FirebaseFirestore firebaseFirestore;
     private StorageReference storageReference;
+
+    private FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
     private ImageView newPostImg;
     private Uri main_uri = null;
     private ProgressBar progressBar;
-    private  String postText;
+    private String postText;
     private Bitmap compressedImageBitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
+
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
         //Toolbar
         toolbarNewPost = findViewById(R.id.toolbarNewPost);
@@ -72,6 +80,9 @@ public class NewPost extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
 
+        databaseReference = firebaseDatabase.getReference("Users" + "/Post Details/");
+
+
         newPostImg = findViewById(R.id.newPostImage);
         newPostText = findViewById(R.id.newPostDesc);
         submitBtn = findViewById(R.id.newPostBtn);
@@ -82,8 +93,8 @@ public class NewPost extends AppCompatActivity {
             public void onClick(View view) {
                 CropImage.activity()
                         .setGuidelines(CropImageView.Guidelines.ON)
-                        .setMinCropResultSize(512,512)
-                        .setAspectRatio(1,1)
+                        .setMinCropResultSize(512, 512)
+                        .setAspectRatio(1, 1)
                         .start(NewPost.this);
             }
         });
@@ -94,7 +105,7 @@ public class NewPost extends AppCompatActivity {
             public void onClick(View view) {
                 postText = newPostText.getText().toString();
                 progressBar.setVisibility(View.VISIBLE);
-                if(main_uri != null && !TextUtils.isEmpty(postText)){
+                if (main_uri != null && !TextUtils.isEmpty(postText)) {
 //                    final String timestamp = FieldValue.serverTimestamp().toString();
 
                     progressBar.setVisibility(View.VISIBLE);
@@ -108,76 +119,82 @@ public class NewPost extends AppCompatActivity {
                     filePath.putFile(main_uri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull final Task<UploadTask.TaskSnapshot> task) {
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
 
-                                //downloadURI is url of image uploaded that link of image only
-                             //   final String downloadUrl = task.getResult().getDownloadUrl().toString();
 
-                                //upload thumbnail compressed
-                                File imageFile = new File(main_uri.getPath());
-
-                                try {
-                                    compressedImageBitmap = new Compressor(NewPost.this)
-                                            .setMaxHeight(100)
-                                            .setMaxWidth(100)
-                                            .setQuality(1)
-                                            .compressToBitmap(imageFile);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-
-                                //Uploadinf bitmap to firebase
-                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                                compressedImageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                                byte[] thumbBitmap = baos.toByteArray();
-
-                                UploadTask thumbImage = storageReference.child("/post_images/thumbs").child(randomName+".jpg").putBytes(thumbBitmap);
-                                thumbImage.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                storageReference.child("post_images").child(randomName + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                     @Override
-                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                        if(task.isSuccessful()){
+                                    public void onSuccess(Uri uri) {
+                                        final String downloadUrl = uri.toString();
 
-                                         //   String thumbUri = task.getResult().getDownloadUrl().toString();
 
-                                            Map<String,Object> postMap = new HashMap<>();
-                                          //  postMap.put("image_url",downloadUrl);
-                                            postMap.put("desc",postText);
-                                            postMap.put("user_id",user_id);
-                                         //   postMap.put("image_thumb",thumbUri);
-                                            postMap.put("timeStamp",FieldValue.serverTimestamp());
+                                        //upload thumbnail compressed
+                                        File imageFile = new File(main_uri.getPath());
 
-                                            //Finally add everything to collection
-                                            //we dont add .document as it must be created and named randomly by firebase automatically
-                                            firebaseFirestore.collection("Posts").add(postMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<DocumentReference> task) {
-                                                    if (task.isSuccessful()) {
-                                                        progressBar.setVisibility(View.INVISIBLE);
-                                                        Toast.makeText(NewPost.this, "Successfully Posted", Toast.LENGTH_LONG).show();
-                                                        Intent main = new Intent(NewPost.this,MainActivity.class);
-                                                        startActivity(main);
-                                                        finish();
-                                                    } else {
-                                                        Toast.makeText(NewPost.this, "Error" + task.getException().toString(), Toast.LENGTH_LONG).show();
-                                                        progressBar.setVisibility(View.INVISIBLE);
-                                                    }
+                                        try {
+                                            compressedImageBitmap = new Compressor(NewPost.this)
+                                                    .setMaxHeight(100)
+                                                    .setMaxWidth(100)
+                                                    .setQuality(1)
+                                                    .compressToBitmap(imageFile);
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+
+                                        //Uploadinf bitmap to firebase
+                                        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                        compressedImageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                        byte[] thumbBitmap = baos.toByteArray();
+
+                                        UploadTask thumbImage = storageReference.child("/post_images/thumbs").child(randomName + ".jpg").putBytes(thumbBitmap);
+                                        thumbImage.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                            @Override
+                                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                                if (task.isSuccessful()) {
+
+
+                                                    storageReference.child("/post_images/thumbs").child(randomName + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                        @Override
+                                                        public void onSuccess(Uri uri) {
+                                                            String thumbUri = uri.toString();
+
+
+                                                            NewPostModelclass postMap = new NewPostModelclass(postText,"JAVA",downloadUrl.toString(),user_id,thumbUri,FieldValue.serverTimestamp().toString());
+
+                                                            //Finally add everything to collection
+                                                            //we dont add .document as it must be created and named randomly by firebase automatically
+                                                            databaseReference.setValue(postMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                @Override
+                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                    if (task.isSuccessful()) {
+                                                                        progressBar.setVisibility(View.INVISIBLE);
+                                                                        Toast.makeText(NewPost.this, "Successfully Posted", Toast.LENGTH_LONG).show();
+                                                                        Intent main = new Intent(NewPost.this, MainActivity.class);
+                                                                        startActivity(main);
+                                                                        finish();
+                                                                    } else {
+                                                                        Toast.makeText(NewPost.this, "Error" + task.getException().toString(), Toast.LENGTH_LONG).show();
+                                                                        progressBar.setVisibility(View.INVISIBLE);
+
+                                                                    }
+                                                                }
+
+                                                            });
+                                                        }
+                                                    });
+                                                } else {
+                                                    Toast.makeText(NewPost.this, "Error" + task.getException().toString(), Toast.LENGTH_LONG).show();
+                                                    progressBar.setVisibility(View.INVISIBLE);
                                                 }
-                                            });
-
-
-                                        }
-                                        else {
-                                            Toast.makeText(NewPost.this, "Error" + task.getException().toString(), Toast.LENGTH_LONG).show();
-                                            progressBar.setVisibility(View.INVISIBLE);
-                                        }
+                                            }
+                                        });
                                     }
                                 });
 
-}
+                            }
                         }
                     });
-                }
-                else{
+                } else {
                     Toast.makeText(NewPost.this, "No Image or Description", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.INVISIBLE);
                 }
@@ -203,7 +220,7 @@ public class NewPost extends AppCompatActivity {
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
-                Toast.makeText(NewPost.this,"Error"+error,Toast.LENGTH_LONG).show();
+                Toast.makeText(NewPost.this, "Error" + error, Toast.LENGTH_LONG).show();
 
             }
         }
@@ -214,7 +231,7 @@ public class NewPost extends AppCompatActivity {
         StringBuilder randomStringBuilder = new StringBuilder();
         int randomLength = generator.nextInt(MAX_LENGTH);
         char tempChar;
-        for (int i = 0; i < randomLength; i++){
+        for (int i = 0; i < randomLength; i++) {
             tempChar = (char) (generator.nextInt(96) + 32);
             randomStringBuilder.append(tempChar);
         }

@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.StorageReference;
 
@@ -29,6 +31,8 @@ public class register extends AppCompatActivity {
     private TextView loggedIn;
     private FirebaseAuth mAuth;
     private FirebaseFirestore fireStore;
+    private FirebaseDatabase database;
+    DatabaseReference databaseReference;
     private String user_id;
     private Uri main_uri;
     private Uri upload_uri;
@@ -48,8 +52,8 @@ public class register extends AppCompatActivity {
         progressReg = findViewById(R.id.progressReg);
 
         mAuth = FirebaseAuth.getInstance();
-
-
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference("Users");
         loggedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

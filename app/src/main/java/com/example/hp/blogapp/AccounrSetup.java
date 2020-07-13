@@ -27,6 +27,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -61,6 +63,9 @@ public class AccounrSetup extends AppCompatActivity {
     private Bitmap compressedImageBitmap;
 
 
+    DatabaseReference databaseReference;
+    FirebaseDatabase database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +76,10 @@ public class AccounrSetup extends AppCompatActivity {
         toolbarSetup = findViewById(R.id.toolbarSetup);
         setSupportActionBar(toolbarSetup);
         getSupportActionBar().setTitle("Account Setup");
+
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference("Users"+"/"+"Profile_Details");
+
 
          Submit = findViewById(R.id.submit);
         progressBar = findViewById(R.id.AccountSettingsBar);
@@ -144,7 +153,7 @@ public class AccounrSetup extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                 if (task.isSuccessful()) {
-                                    saveToFirestore( uName);
+                                    saveToFire_base( uName);
                                 } else {
                                     String error = task.getException().getMessage();
                                     Toast.makeText(AccounrSetup.this, " Image Error" + error, Toast.LENGTH_LONG).show();
@@ -162,7 +171,7 @@ public class AccounrSetup extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(AccounrSetup.this, "Image not changed", Toast.LENGTH_LONG).show();
-                    saveToFirestore(Name.getText().toString());
+                    saveToFire_base(Name.getText().toString());
                 }
             }
 
@@ -204,13 +213,13 @@ public class AccounrSetup extends AppCompatActivity {
     }
 
 
-    private void saveToFirestore( final String uName) {
+    private void saveToFire_base( final String uName) {
 
 
         //If task is not null that is change occured. So get new URI for image also change ThumbNail
 
 
-        mStorageRef.child("/Profile_Photos/thumbs").child(user_id+".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        mStorageRef.child("/Profile_Photos/thumbs").child(user_id + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
 
@@ -219,7 +228,9 @@ public class AccounrSetup extends AppCompatActivity {
 
                 userMap.put("name", uName);
                 userMap.put("image", uri.toString());
-                fireStore.collection("Users").document(user_id).set(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+
+                databaseReference.child(user_id).setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
@@ -233,13 +244,7 @@ public class AccounrSetup extends AppCompatActivity {
                     }
                 });
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle any errors
-            }
         });
-
     }
 
 

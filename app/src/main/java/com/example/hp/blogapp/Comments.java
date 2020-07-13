@@ -88,7 +88,7 @@ public class Comments extends AppCompatActivity {
                             //USE MODEL CLASS and save one object obtained into Model class list
                             CommentModelClass commentData = doc.getDocument().toObject(CommentModelClass.class);
                             commentList.add(commentData);
-                        //    commentsRecyclerAdapter.notifyDataSetChanged();
+                            commentsRecyclerAdapter.notifyDataSetChanged();
                         }
                     }
 
