@@ -1,0 +1,526 @@
+[
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_account_circle_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\baseline_account_circle_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_image_like_red.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-hdpi\\image_like_red.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_rectmail.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-v24\\rectmail.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_mail_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\mail_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_field.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\field.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_comments.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_action_add_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\action_add_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_title.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_image_like_gray.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\image_like_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_plus.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_pass_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\pass_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_notifications_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\baseline_notifications_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_action_add_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\action_add_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_home_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\baseline_home_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_image_like_gray.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\image_like_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_home_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_home_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_mail_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\mail_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_pass_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\pass_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_login.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_rectmail.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\rectmail.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_image_like_red.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\image_like_red.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_open_sans_semibold.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\open_sans_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_image_like_red.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\image_like_red.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_image_like_red.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\image_like_red.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_action_comment_icon_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\action_comment_icon_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_action_comment_send_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\action_comment_send_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_login.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_title.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_post_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\post_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_post_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\post_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_login.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_image_like_gray.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\image_like_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_profile_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_reg.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-v24\\reg.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_pass_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\pass_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_action_comment_icon_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\action_comment_icon_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\menu_main_bottom.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\menu\\main_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_account_circle_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\baseline_account_circle_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_action_search.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_title.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_post_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\post_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_profile_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_title.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_averia_libre_bold.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\averia_libre_bold.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_notifications_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_notifications_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_home_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\baseline_home_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_plus.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_comment_list_item.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\comment_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\image_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sign.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-v24\\sign.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notification.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\fragment_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_action_comment_send_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\action_comment_send_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_post_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\post_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_accounr_setup.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_accounr_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_allerta_stencil.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\allerta_stencil.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_account_circle_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_account_circle_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\image_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_account_circle_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_account_circle_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_plus.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_notifications_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\baseline_notifications_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_rect3.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\rect3.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_action_add_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\action_add_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\fragment_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_field.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\field.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_acme.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\acme.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_action_comment_send_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\action_comment_send_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_plus.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_plus.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_login.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_profile_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_action_search.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_login.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_account_circle_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\baseline_account_circle_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_image_like_gray.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\image_like_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_pass_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\pass_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_pass_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\pass_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_action_add_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\action_add_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_field.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\field.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_notifications_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\baseline_notifications_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_blog_list_item.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\blog_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_action_search.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_action_comment_icon_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxxhdpi\\action_comment_icon_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_mail_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\mail_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_new_post.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_new_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_notifications_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_notifications_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_image_like_gray.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-hdpi\\image_like_gray.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_action_comment_send_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\action_comment_send_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\image_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_action_add_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\action_add_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_action_search.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_image_like_red.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\image_like_red.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_mail_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\mail_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_action_search.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-hdpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_home_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_home_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_rectbg.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\rectbg.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_rect4.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\rect4.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_averia_libre_light.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\averia_libre_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_action_comment_icon_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\action_comment_icon_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_post_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\post_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_profile_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\image_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_home_black_18dp.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\baseline_home_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_field.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\field.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_action_comment_icon_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\action_comment_icon_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mail_icon.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-hdpi\\mail_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_action_comment_send_web.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xhdpi\\action_comment_send_web.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_image_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\image_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_title.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\title.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_field.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-mdpi\\field.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_profile_placeholder.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\drawable-xxhdpi\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_user.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xhdpi\\user.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\build\\intermediates\\res\\merged\\debug\\font_autour_one.xml.flat",
+        "source": "C:\\Users\\kushal\\Desktop\\BlogApplication\\app\\src\\main\\res\\font\\autour_one.xml"
+    }
+]
