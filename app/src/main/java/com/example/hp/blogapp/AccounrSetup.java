@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,12 +21,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -50,7 +56,7 @@ public class AccounrSetup extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private boolean isChanged = true;
     private FirebaseFirestore fireStore;
-    private EditText Name, Contact, Address, Intro;
+    private EditText Name, Contact, Address, Intro, EmailID_text;
     private StorageReference mStorageRef;
     Button Submit;
     private String user_id;
@@ -74,9 +80,14 @@ public class AccounrSetup extends AppCompatActivity {
         Contact = findViewById(R.id.conatct);
         Address = findViewById(R.id.address);
         Intro = findViewById(R.id.intro);
+        EmailID_text = findViewById(R.id.emailID);
+
+        mAuth = FirebaseAuth.getInstance();
+        EmailID_text.setText(mAuth.getCurrentUser().getEmail());
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("Users");
+
         Submit = findViewById(R.id.submit);
         progressBar = findViewById(R.id.AccountSettingsBar);
         user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -117,6 +128,70 @@ public class AccounrSetup extends AppCompatActivity {
 //                }
 //            }
 //        });
+        databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final String uid = mAuth.getCurrentUser().getUid();
+                final DatabaseReference databaseReference1 = databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details");
+                DatabaseReference databaseReference2 = databaseReference1.child(uid);
+                ValueEventListener eventListener = new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (!dataSnapshot.exists()) {
+                            //create new user
+                            isChanged = false;
+                            databaseReference1.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                    AccountSetupModelClass accountSetupModelClass = snapshot.getValue(AccountSetupModelClass.class);
+                                    assert accountSetupModelClass != null;
+                                    String name = accountSetupModelClass.getName();
+                                    String contact = accountSetupModelClass.getContact();
+                                    String add = accountSetupModelClass.getAddress();
+                                    String imgUri = accountSetupModelClass.getImageUri();
+                                    String intro = accountSetupModelClass.getIntroduction();
+                                    Toast.makeText(AccounrSetup.this, "DATA EXISTS", Toast.LENGTH_LONG).show();
+                                    Name.setText(name);
+                                    EmailID_text.setText(mAuth.getCurrentUser().getEmail());
+                                    Contact.setText(contact);
+                                    Address.setText(add);
+                                    Intro.setText(intro);
+
+                                    //GLIDE APP set default background
+                                    RequestOptions placeHolder = new RequestOptions();
+                                    placeHolder.placeholder(R.mipmap.user);
+
+                                    //Convert image string to URI and store it in mainImageUri
+                                    main_uri = Uri.parse(imgUri);
+
+                                    Glide.with(AccounrSetup.this).setDefaultRequestOptions(placeHolder.placeholder(R.mipmap.user)).load(imgUri).into(userImg);
+
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.e("AccountSetup", databaseError.getMessage()); //Don't ignore errors!
+                    }
+                };
+                databaseReference2.addListenerForSingleValueEvent(eventListener);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,10 +199,11 @@ public class AccounrSetup extends AppCompatActivity {
                 final String contact = Contact.getText().toString();
                 final String address = Address.getText().toString();
                 final String Introduction = Intro.getText().toString();
+                final String email = EmailID_text.getText().toString();
                 if (isChanged) {
                     if (!TextUtils.isEmpty(uName) && main_uri != null) {
                         progressBar.setVisibility(View.VISIBLE);
-                       // String user_id = mAuth.getCurrentUser().getUid();
+                        // String user_id = mAuth.getCurrentUser().getUid();
 
                         File imageFile = new File(main_uri.getPath());
 
@@ -151,7 +227,7 @@ public class AccounrSetup extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                 if (task.isSuccessful()) {
-                                    saveToFire_base(uName, contact, address, Introduction);
+                                    saveToFire_base(uName, contact, address, Introduction, email);
                                 } else {
                                     String error = task.getException().getMessage();
                                     Toast.makeText(AccounrSetup.this, " Image Error" + error, Toast.LENGTH_LONG).show();
@@ -167,7 +243,7 @@ public class AccounrSetup extends AppCompatActivity {
                     }
                 } else {
                     Toast.makeText(AccounrSetup.this, "Image not changed", Toast.LENGTH_LONG).show();
-                    saveToFire_base(uName, contact, address, Introduction);
+                    saveToFire_base(uName, contact, address, Introduction, email);
                 }
             }
 
@@ -209,17 +285,16 @@ public class AccounrSetup extends AppCompatActivity {
     }
 
 
-    private void saveToFire_base(final String uName, final String con, final String add, final String intro) {
+    private void saveToFire_base(final String uName, final String con, final String add, final String intro, final String email) {
 
 
         //If task is not null that is change occured. So get new URI for image also change ThumbNail
 
 
-
         mStorageRef.child("/Profile_Photos/thumbs").child(user_id + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                final AccountSetupModelClass accountSetupModelClass = new AccountSetupModelClass(uName, con, add, intro,uri.toString());
+                final AccountSetupModelClass accountSetupModelClass = new AccountSetupModelClass(uName, con, add, intro, uri.toString(), email,mAuth.getUid());
 
                 //Create map..with keys common and values
                 databaseReference.child(user_id + "/profile_Details").setValue(accountSetupModelClass).addOnCompleteListener(new OnCompleteListener<Void>() {

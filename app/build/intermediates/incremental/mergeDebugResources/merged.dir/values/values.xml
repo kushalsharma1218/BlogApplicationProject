@@ -867,6 +867,7 @@
     <string name="crop_image_menu_rotate_right">Rotate</string>
     <string name="default_web_client_id" translatable="false">723409317284-9v0hu68h1ohjutvd5h7s8n37vq8hvfis.apps.googleusercontent.com</string>
     <string name="email">Email</string>
+    <string name="email_id">Email ID</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>

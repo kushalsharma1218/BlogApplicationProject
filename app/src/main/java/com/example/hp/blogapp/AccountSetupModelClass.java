@@ -6,18 +6,38 @@ public class AccountSetupModelClass {
     private String Address;
     private String Introduction;
     private String ImageUri;
+    private String EmailID;
+    private String UID;
 
 
     public AccountSetupModelClass(){}
 
 
-    public AccountSetupModelClass(String Name,String con,String add,String intro,String imgUri)
+    public AccountSetupModelClass(String Name,String con,String add,String intro,String imgUri,String emailid,String Uid)
     {
         this.Name = Name;
         this.Contact = con;
         this.Address = add;
         this.Introduction = intro;
         this.ImageUri = imgUri;
+        this.EmailID = emailid;
+        this.UID = Uid;
+    }
+
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
+    public String getEmailID() {
+        return EmailID;
+    }
+
+    public void setEmailID(String emailID) {
+        EmailID = emailID;
     }
 
     public String getImageUri() {

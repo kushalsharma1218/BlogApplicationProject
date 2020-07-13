@@ -1671,6 +1671,7 @@ id direct
 id disableHome
 id dropdown_menu
 id edit_query
+id emailID
 id emailReg
 id end
 id enterAlways
@@ -2122,6 +2123,7 @@ string crop_image_menu_rotate_left
 string crop_image_menu_rotate_right
 string default_web_client_id
 string email
+string email_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior

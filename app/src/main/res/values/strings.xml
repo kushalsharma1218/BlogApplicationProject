@@ -20,4 +20,5 @@
     <string name="contact">Contact</string>
     <string name="address">Address</string>
     <string name="a_short_summary">A short Summary</string>
+    <string name="email_id">Email ID</string>
 </resources>
