@@ -99,33 +99,27 @@ public class AccounrSetup extends AppCompatActivity {
         databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final String uid = mAuth.getCurrentUser().getUid();
-                Log.e("Accoint Setup Strp 1",""+uid);
+
                 final DatabaseReference databaseReference1 = databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details");
-                DatabaseReference databaseReference2 = databaseReference1.child(uid);
-                Log.e("Account Setup Step 2",""+uid);
+                DatabaseReference databaseReference2 = databaseReference1.child("uid");
                 ValueEventListener eventListener = new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Log.e("Value",""+dataSnapshot.exists());
                         if (dataSnapshot.exists()) {
-                            //create new user
-                            Log.e("Account Setup Step 3","Entered extits");
-
                             isChanged = false;
                             databaseReference1.addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                                     AccountSetupModelClass accountSetupModelClass = snapshot.getValue(AccountSetupModelClass.class);
-                                    assert accountSetupModelClass != null;
                                     String name = accountSetupModelClass.getName();
+                                    Log.e("Step 2",""+name);
                                     String contact = accountSetupModelClass.getContact();
                                     String add = accountSetupModelClass.getAddress();
                                     String imgUri = accountSetupModelClass.getImageUri();
                                     String intro = accountSetupModelClass.getIntroduction();
                                     Toast.makeText(AccounrSetup.this, "DATA EXISTS", Toast.LENGTH_LONG).show();
                                     Name.setText(name);
-                                    EmailID_text.setText(mAuth.getCurrentUser().getEmail());
                                     Contact.setText(contact);
                                     Address.setText(add);
                                     Intro.setText(intro);

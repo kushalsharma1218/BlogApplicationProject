@@ -90,44 +90,44 @@ public class HomeFragment extends Fragment {
 
 
                 //getActivity bcoz to stop the on scroll listener after page closed bcause it will still call load more post
-                firstQuery.addSnapshotListener(getActivity(), new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-
-
-                        //get lastVisibile iff first page not loaded at starting
-                        if (firstPageLoaded) {
-                            // Get the last visible documentSnapshot
-                            lastVisible = documentSnapshots.getDocuments()
-                                    .get(documentSnapshots.size() - 1);
-                        }
-
-                        for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
-
-                            if (doc.getType() == DocumentChange.Type.ADDED) {
-                                //Blog Id ..name same as that is Extender class
-                                String BlogPostId = doc.getDocument().getId();
-                                //USE MODEL CLASS and save one object obtained into Model class list
-                                BlogPost blogPost = doc.getDocument().toObject(BlogPost.class).withId(BlogPostId);
-
-
-                                if (firstPageLoaded) {
-                                    blogList.add(blogPost);
-                                }
-                                //Add new post to top
-                                else {
-                                    blogList.add(0, blogPost);
-                                }
-
-
-                                blogRecycleAdapter.notifyDataSetChanged();
-                            }
-                        }
-
-                    }
-
-
-                });
+//                firstQuery.addSnapshotListener(getActivity(), new EventListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+//
+//
+//                        //get lastVisibile iff first page not loaded at starting
+//                        if (firstPageLoaded) {
+//                            // Get the last visible documentSnapshot
+//                            lastVisible = documentSnapshots.getDocuments()
+//                                    .get(documentSnapshots.size() - 1);
+//                        }
+//
+//                        for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
+//
+//                            if (doc.getType() == DocumentChange.Type.ADDED) {
+//                                //Blog Id ..name same as that is Extender class
+//                                String BlogPostId = doc.getDocument().getId();
+//                                //USE MODEL CLASS and save one object obtained into Model class list
+//                                BlogPost blogPost = doc.getDocument().toObject(BlogPost.class).withId(BlogPostId);
+//
+//
+//                                if (firstPageLoaded) {
+//                                    blogList.add(blogPost);
+//                                }
+//                                //Add new post to top
+//                                else {
+//                                    blogList.add(0, blogPost);
+//                                }
+//
+//
+//                                blogRecycleAdapter.notifyDataSetChanged();
+//                            }
+//                        }
+//
+//                    }
+//
+//
+//                });
 
             }
         }
