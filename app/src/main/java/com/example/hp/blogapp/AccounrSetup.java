@@ -96,49 +96,21 @@ public class AccounrSetup extends AppCompatActivity {
         userImg = findViewById(R.id.profile);
         default_uri = Uri.parse("R.mipmap.user");
 
-        //Evertime settings load check if data is already present in FireStore, if yes retrive and set name and image using glide
-//        fireStore.collection("Users").document(user_id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-//                if(task.isSuccessful()){
-//                    if(task.getResult().exists()){
-//                        isChanged = false;
-//                        String name = task.getResult().getString("name");
-//                        String image = task.getResult().getString("image");
-////                        Toast.makeText(AccounrSetup.this,"DATA EXISTS",Toast.LENGTH_LONG).show();
-//                        Name.setText(name);
-//
-//                        //GLIDE APP set default background
-//                        RequestOptions placeHolder = new RequestOptions();
-//                        placeHolder.placeholder(R.mipmap.user);
-//
-//                        //Convert image string to URI and store it in mainImageUri
-//                        main_uri = Uri.parse(image);
-//
-//                        Glide.with(AccounrSetup.this).setDefaultRequestOptions( placeHolder.placeholder(R.mipmap.user)).load(image).into(userImg);
-//
-//                    }
-//                    else{
-//                        main_uri = default_uri;
-//                        Toast.makeText(AccounrSetup.this,"NO DATA EXISTS",Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//                else{
-//                    Toast.makeText(AccounrSetup.this,"Firestore Retrieve Error OUTSIDE",Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
         databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final String uid = mAuth.getCurrentUser().getUid();
+                Log.e("Accoint Setup Strp 1",""+uid);
                 final DatabaseReference databaseReference1 = databaseReference.child(mAuth.getCurrentUser().getUid() + "/profile_Details");
                 DatabaseReference databaseReference2 = databaseReference1.child(uid);
+                Log.e("Account Setup Step 2",""+uid);
                 ValueEventListener eventListener = new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (!dataSnapshot.exists()) {
+                        if (dataSnapshot.exists()) {
                             //create new user
+                            Log.e("Account Setup Step 3","Entered extits");
+
                             isChanged = false;
                             databaseReference1.addValueEventListener(new ValueEventListener() {
                                 @Override
@@ -180,7 +152,7 @@ public class AccounrSetup extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-                        Log.e("AccountSetup", databaseError.getMessage()); //Don't ignore errors!
+                        Log.e("AccountSetup", databaseError.getMessage());
                     }
                 };
                 databaseReference2.addListenerForSingleValueEvent(eventListener);
