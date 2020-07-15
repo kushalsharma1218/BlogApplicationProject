@@ -2,6 +2,7 @@ package com.example.hp.blogapp;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -36,8 +42,10 @@ public class HomeFragment extends Fragment {
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth mauth;
     private BlogRecycleAdapter blogRecycleAdapter;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
     private boolean firstPageLoaded = true;
-
+    List<BlogPost> al;
 
 
 
@@ -56,7 +64,7 @@ public class HomeFragment extends Fragment {
         blog_list_View = view.findViewById(R.id.blog_list_view);
         blogList = new ArrayList<>();
         blogRecycleAdapter = new BlogRecycleAdapter(blogList);
-
+        al = new ArrayList<>();
         //Set adapter to Recycler View
         blog_list_View.setLayoutManager(new LinearLayoutManager(getActivity()));
         blog_list_View.setAdapter(blogRecycleAdapter);
@@ -84,9 +92,9 @@ public class HomeFragment extends Fragment {
 
             if (mauth.getCurrentUser() != null) {
                 //Order according to date
-                Query firstQuery = firebaseFirestore.collection("Posts")
-                        .orderBy("timeStamp", Query.Direction.DESCENDING)
-                        .limit(3);
+//                Query firstQuery = firebaseFirestore.collection("Posts")
+//                        .orderBy("timeStamp", Query.Direction.DESCENDING)
+//                        .limit(3);
 
 
                 //getActivity bcoz to stop the on scroll listener after page closed bcause it will still call load more post
@@ -128,6 +136,34 @@ public class HomeFragment extends Fragment {
 //
 //
 //                });
+
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                databaseReference = firebaseDatabase.getReference("Posts");
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists())
+                        {
+                            for(DataSnapshot dataSnapshot : snapshot.getChildren())
+                            {
+                                BlogPost blogPost = dataSnapshot.getValue(BlogPost.class);
+                                al.add(blogPost);
+
+                            }
+
+                        }
+                        Log.e("'Data....","getting");
+                        for(int i=0;i<al.size();i++)
+                        {
+                            Log.e("'Data....",""+al.get(i).getDescription());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
             }
         }

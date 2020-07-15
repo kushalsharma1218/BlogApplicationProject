@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FieldValue;
@@ -40,6 +41,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
 
@@ -203,7 +205,7 @@ public class NewPost extends AppCompatActivity {
                                                                         Toast.makeText(NewPost.this, "Successfully Posted", Toast.LENGTH_LONG).show();
                                                                         Intent main = new Intent(NewPost.this, MainActivity.class);
                                                                         startActivity(main);
-                                                                        sendDataToPostFirebase(postText, "JAVA", downloadUrl, user_id, thumbUri, FieldValue.serverTimestamp().toString());
+                                                                        sendDataToPostFirebase(postText, "JAVA", downloadUrl, user_id, thumbUri);
                                                                         finish();
                                                                     } else {
                                                                         Toast.makeText(NewPost.this, "Error" + task.getException().toString(), Toast.LENGTH_LONG).show();
@@ -259,8 +261,9 @@ public class NewPost extends AppCompatActivity {
         }
     }
 
-    public void sendDataToPostFirebase(String postText, String tag, String downloadUrl, String user_id, String thumbUri, String time) {
-        final NewPostModelClass2 newPostModelClass2 = new NewPostModelClass2(postText, tag, downloadUrl, user_id, thumbUri, time);
+    public void sendDataToPostFirebase(String postText, String tag, String downloadUrl, String user_id, String thumbUri) {
+        final NewPostModelClass2 newPostModelClass2 = new NewPostModelClass2(postText, tag, downloadUrl, user_id, thumbUri);
+        newPostModelClass2.setTimestamp(ServerValue.TIMESTAMP);
         databaseReference2.child(String.valueOf(maxID+1)).setValue(newPostModelClass2);
     }
 

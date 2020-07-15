@@ -1,24 +1,29 @@
 package com.example.hp.blogapp;
 
+import com.google.firebase.firestore.FieldValue;
+import com.google.gson.FieldNamingStrategy;
+
+import java.util.Date;
+import java.util.Map;
+
 public class NewPostModelClass2 {
     private String description;
     private String tag;
     private String image;
     private String user;
     private String imageThumb;
-    private String time;
+    private Map<String, String> timestamp;
 
 
     NewPostModelClass2(){}
 
-    NewPostModelClass2(String desc, String Tag, String Image, String User, String Imagethumb, String Time)
+    NewPostModelClass2(String desc, String Tag, String Image, String User, String Imagethumb)
     {
         this.description = desc;
         this.tag = Tag;
         this.image = Image;
         this.user = User;
         this.imageThumb = Imagethumb;
-        this.time = Time;
     }
 
     public String getDescription() {
@@ -61,12 +66,8 @@ public class NewPostModelClass2 {
         this.imageThumb = imageThumb;
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
+    public void setTimestamp(Map<String, String> timeStamp) {this.timestamp= timestamp;}
+    public Map<String, String> getTimestamp() {return timestamp;}
 }
+
 

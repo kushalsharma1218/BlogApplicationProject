@@ -80,11 +80,11 @@ public class BlogRecycleAdapter extends RecyclerView.Adapter<BlogRecycleAdapter.
 //        holder.setIsRecyclable(false);
 
 
-        String desc_text = blogList.get(position).getDesc();
+        String desc_text = blogList.get(position).getDescription();
         holder.setDescText(desc_text);
 
-        String download_uri = blogList.get(position).getImage_url();
-        String thumb_uri = blogList.get(position).getImage_thumb();
+        String download_uri = blogList.get(position).getImage();
+        String thumb_uri = blogList.get(position).getImageThumb();
         holder.setImage(download_uri,thumb_uri);
 
 
@@ -92,7 +92,7 @@ public class BlogRecycleAdapter extends RecyclerView.Adapter<BlogRecycleAdapter.
 
         if(FirebaseAuth.getInstance().getCurrentUser() != null) {
             //get user id and retrieve user image stored in Users Collection
-            user_id = blogList.get(position).getUser_id();
+            user_id = blogList.get(position).getUser();
             firebaseFirestore.collection("Users").document(user_id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -114,18 +114,18 @@ public class BlogRecycleAdapter extends RecyclerView.Adapter<BlogRecycleAdapter.
         }
 
         //SetDate
-        long milliseconds = blogList.get(position).getTimeStamp().getTime();
+        //long milliseconds = blogList.get(position).getTime().getTime();
 
 //        String dateString = DateFormat.format("dd/MM/yyyy", new Date(milliseconds)).toString();
 //        String dateString1 = DateFormat.format("E, dd MMM yy", new Date(millisecond)).toString();
-        String pattern = "E, dd MMM yy";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-        String dateString1 = simpleDateFormat.format(new Date(milliseconds));
-        pattern = "HH:mm a";
-        simpleDateFormat = new SimpleDateFormat(pattern);
-        String dateString2 = simpleDateFormat.format(new Date(milliseconds));
+//        String pattern = "E, dd MMM yy";
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+//        String dateString1 = simpleDateFormat.format(new Date(milliseconds));
+//        pattern = "HH:mm a";
+//        simpleDateFormat = new SimpleDateFormat(pattern);
+//        String dateString2 = simpleDateFormat.format(new Date(milliseconds));
 
-        holder.setDate(dateString1+" at "+dateString2);
+//        holder.setDate(dateString1+" at "+dateString2);
 
 
 

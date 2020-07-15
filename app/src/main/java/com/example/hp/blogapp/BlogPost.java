@@ -8,8 +8,8 @@ import java.util.Date;
 //THIS IS THE MODEL CLASS
 public class BlogPost extends BlogPostId {
 
-    public String image_url, image_thumb, desc,user_id;
-    public Date timeStamp;
+    public String image, imageThumb, description,user,tag;
+    public String time;
 
 
 
@@ -18,53 +18,59 @@ public class BlogPost extends BlogPostId {
 
     }
 
-    public BlogPost(String image_url, String image_thumb, String desc, String user_id,Date timeStamp) {
-        this.image_url = image_url;
-        this.image_thumb = image_thumb;
-        this.desc = desc;
-        this.user_id = user_id;
-       this.timeStamp = timeStamp;
+    public BlogPost(String image_url, String image_thumb, String desc, String user_id,String timeStamp) {
+        this.image = image_url;
+        this.imageThumb = image_thumb;
+        this.description = desc;
+        this.user = user_id;
+       this.time = timeStamp;
     }
 
-    public String getImage_url() {
-
-        return image_url;
+    public String getImage() {
+        return image;
     }
 
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public String getImage_thumb() {
-        return image_thumb;
+    public String getImageThumb() {
+        return imageThumb;
     }
 
-    public void setImage_thumb(String image_thumb) {
-        this.image_thumb = image_thumb;
+    public void setImageThumb(String imageThumb) {
+        this.imageThumb = imageThumb;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUser() {
+        return user;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public Date getTimeStamp() {
-        return timeStamp;
+    public String getTag() {
+        return tag;
     }
 
-    public void setTimeStamp(Date timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 }
